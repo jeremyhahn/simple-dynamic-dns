@@ -1,0 +1,107 @@
+--- ddclient	2011-03-17 09:21:40.656466971 -0400
++++ ddclient-hostabyte	2011-03-17 09:30:55.185911700 -0400
+@@ -545,6 +545,16 @@
+ 			  $variables{'service-common-defaults'},
+ 			),
+     },
++    'hostabyte' => {
++	'updatetable' => undef,
++	'update'      => \&nic_hostabyte_update,
++	'examples'    => \&nic_hostabyte_examples,
++	'variables' => merge(
++			 { 'server'		=> setv(T_FQDNP, 1, 0, 1, 'api.hostabyte.com', undef) },
++			 { 'min-interval'	=> setv(T_DELAY, 0, 0, 1, interval('10s'), 0),},
++			 $variables{'service-common-defaults'},
++		       ),
++    },
+ );
+ $variables{'merged'} = merge($variables{'global-defaults'},
+ 			     $variables{'service-common-defaults'},
+@@ -3560,8 +3570,86 @@
+ }
+ 
+ ######################################################################
++
++
++######################################################################
++## nic_hostabyte_examples
++######################################################################
++sub nic_hostabyte_examples {
++    return <<EoEXAMPLE;
++
++o 'hostabyte'
++
++The 'hostabyte' protocol is used by DNS services offered by www.hostabyte.com.
++
++Configuration variables applicable to the 'hostabyte' protocol are:
++  protocol=hostabyte           ## 
++  server=fqdn.of.service       ## defaults to hostabyte.com
++  login=service-login          ## login name and password registered with the service
++  password=service-password    ##
++  fully.qualified.host         ## Fully qualified domain name registered with service.
++
++Example ${program}.conf file entries:
++  ## single host update
++  protocol=hostabyte,                                         \\
++  login=my-username,                                          \\
++  password=my-password                                        \\
++  my-host.hostabyte.com
++
++EoEXAMPLE
++}
++######################################################################
++## nic_hostabyte_update
++##
++## written by Jeremy Hahn
++##
++## based on http://www.hostabyte.com/index.php/api/ddns/spec
++## needs this url to update:
++## http://www.hostabyte.com/index.php/username/password/fqdn/oldip/newip
++##
++######################################################################
++sub nic_hostabyte_update {
++
++    debug("\nnic_hostabyte_update -------------------");
++
++    ## update each configured host
++    foreach my $h (@_) {
++	my $ip = delete $config{$h}{'wantip'};
++        info("setting IP address to %s for %s", $ip, $h);
++        verbose("UPDATE:","updating %s", $h);
++
++        my $url;
++        $url   = "http://$config{$h}{'server'}/index.php/api/update";
++#        $url  .= "/$config{$h}{'login'}";
++#        $url  .= "/$config{$h}{'password'}";
++        $url  .= "/$h";
++	$url .= "/" . ($cache{$h}{'ip'} ? $cache{$h}{'ip'} : 'null');
++        $url  .= "/" . $ip if $ip;
++
++        my $reply = geturl(opt('proxy'), $url);
++        if (!defined($reply) || !$reply) {
++            failed("updating %s: Could not connect to %s.", $h, $config{$h}{'server'});
++            last;
++        }
++        last if !header_ok($h, $reply);
++
++        my @reply = split /\n/, $reply;
++        if (grep /success/i, @reply) {
++            $config{$h}{'ip'}     = $ip;
++            $config{$h}{'mtime'}  = $now;
++            $config{$h}{'status'} = 'good';
++            success("updating %s: good: IP address set to %s", $h, $ip);
++        } else {
++            $config{$h}{'status'} = 'failed';
++            warning("SENT:    %s", $url) unless opt('verbose');
++            warning("REPLIED: %s", $reply);
++            failed("updating %s: Invalid reply.", $h);
++        }
++    }
++}
++
++
+ # vim: ai ts=4 sw=4 tw=78 :
+ 
+ 
+ __END__
+-

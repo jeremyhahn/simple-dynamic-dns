@@ -1,0 +1,12 @@
+<Files .htaccess>
+	order deny,allow
+	deny from all
+</Files>
+<Files orm.xml>
+	order deny,allow
+	deny from all
+</Files>
+<Files agilephp.xml>
+	order deny,allow
+	deny from all
+</Files>

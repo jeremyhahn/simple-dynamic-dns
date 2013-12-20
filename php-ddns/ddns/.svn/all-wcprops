@@ -1,0 +1,131 @@
+K 25
+svn:wc:ra_dav:version-url
+V 36
+/svnroot/ddclient/!svn/ver/124/trunk
+END
+sample-etc_rc.d_init.d_ddclient.redhat
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svnroot/ddclient/!svn/ver/98/trunk/sample-etc_rc.d_init.d_ddclient.redhat
+END
+sample-etc_ddclient.conf
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svnroot/ddclient/!svn/ver/112/trunk/sample-etc_ddclient.conf
+END
+ddclient
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svnroot/ddclient/!svn/ver/124/trunk/ddclient
+END
+UPGRADE
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/svnroot/ddclient/!svn/ver/98/trunk/UPGRADE
+END
+Changelog
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svnroot/ddclient/!svn/ver/98/trunk/Changelog
+END
+sample-etc_rc.d_init.d_ddclient.lsb
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svnroot/ddclient/!svn/ver/98/trunk/sample-etc_rc.d_init.d_ddclient.lsb
+END
+sample-ddclient-wrapper.sh
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svnroot/ddclient/!svn/ver/104/trunk/sample-ddclient-wrapper.sh
+END
+README.cisco
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svnroot/ddclient/!svn/ver/98/trunk/README.cisco
+END
+sample-etc_dhclient-exit-hooks
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svnroot/ddclient/!svn/ver/98/trunk/sample-etc_dhclient-exit-hooks
+END
+sample-etc_rc.d_init.d_ddclient.ubuntu
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svnroot/ddclient/!svn/ver/98/trunk/sample-etc_rc.d_init.d_ddclient.ubuntu
+END
+README.ssl
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svnroot/ddclient/!svn/ver/98/trunk/README.ssl
+END
+README
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/svnroot/ddclient/!svn/ver/112/trunk/README
+END
+sample-etc_cron.d_ddclient
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svnroot/ddclient/!svn/ver/98/trunk/sample-etc_cron.d_ddclient
+END
+TODO
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/svnroot/ddclient/!svn/ver/104/trunk/TODO
+END
+RELEASENOTE
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svnroot/ddclient/!svn/ver/108/trunk/RELEASENOTE
+END
+COPYRIGHT
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svnroot/ddclient/!svn/ver/98/trunk/COPYRIGHT
+END
+COPYING
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/svnroot/ddclient/!svn/ver/98/trunk/COPYING
+END
+sample-etc_rc.d_init.d_ddclient
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svnroot/ddclient/!svn/ver/98/trunk/sample-etc_rc.d_init.d_ddclient
+END
+sample-etc_ppp_ip-up.local
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svnroot/ddclient/!svn/ver/98/trunk/sample-etc_ppp_ip-up.local
+END
+.cvsignore
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svnroot/ddclient/!svn/ver/108/trunk/.cvsignore
+END
+sample-etc_dhcpc_dhcpcd-eth0.exe
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svnroot/ddclient/!svn/ver/98/trunk/sample-etc_dhcpc_dhcpcd-eth0.exe
+END

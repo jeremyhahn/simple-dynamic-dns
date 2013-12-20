@@ -1,0 +1,108 @@
+@CHARSET "UTF-8";
+
+a {
+
+	text-decoration: none;
+}
+
+
+/** AgilePHP Styles */
+
+.info {
+
+	color: #43b605;
+	font-family:tahoma;
+	font-size: 12px;
+	padding-bottom: 5px;
+}
+
+.error {
+
+	font-family:tahoma;
+	font-size: 18px;
+	color: #FF0000;
+}
+
+.agilephpSearchBar {
+
+	text-align: center;
+	font-size: 12px;
+	padding-bottom: 25px;
+}
+
+.agilephpSearchBar input, .agilephpSearchBar select {
+
+	font-size: 12px;
+}
+
+.agilephpTableDescription {
+
+	color: #000000;
+	font-family: tahoma;
+	font-size: 16px;
+	font-weight: bolder;
+	text-align: center;
+	padding-bottom: 20px;
+	padding-top: 25px;
+}
+
+.agilephpTable {
+
+	color: #636363;
+	font-family: tahoma;
+	font-size: 16px;
+	border-collapse: collapse;
+}
+
+.agilephpHeader {
+
+	color: #636363;
+	font-family: tahoma;
+	font-size: 11px;
+	text-decoration: none;
+}
+
+.agilephpHighlight {
+
+	color: #636363;
+	font-family: tahoma;
+	font-size: 10px;
+	background-color: #C9C9C9;
+}
+
+.agilephpRow1 {
+
+	color: #636363;
+	font-family: tahoma;
+	font-size: 10px;
+	background-color: #FFFFFF;
+}
+
+.agilephpRow2 {
+
+	color: #636363;
+	font-family: tahoma;
+	font-size: 10px;
+	background-color: #F9F9F9;
+}
+
+.agilephpPaginationTable {
+
+	color: #636363;
+	font-family: tahoma;
+	font-size: 10px;
+}
+
+.agilephpPaginationHeader {
+
+	color: #636363;
+	font-family: tahoma;
+	font-size: 12px;
+}
+
+.agilephpPaginationRecordCount {
+
+	color: #636363;
+	font-family: tahoma;
+	font-size: 12px;
+}
